@@ -1,13 +1,13 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-  username: { type: String, optional: true },
-  email: { type: String, optional: true },
-  address: { type: String, optional: true },
-  password: { type: String, optional: true },
-  contactnumber: { type: String, optional: true },
-  age: { type: Number, optional: true },
-  role: { type: String, optional: true }, 
+  username: { type: String },
+  email: { type: String },
+  address: { type: String },
+  password: { type: String },
+  contactnumber: { type: String },
+  age: { type: Number, optional: true }, // default value is false
+  role: { type: String }, 
 });
 
 const UserModel = mongoose.model('User', userSchema);
